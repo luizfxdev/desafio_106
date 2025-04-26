@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada dos Números Perdidos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Jornada dos Números Perdidos</h1>
+        <p class="subtitle">Encontre os números que faltam na sequência mágica!</p>
+
+        <div class="input-group">
+            <label for="sequence-input">Insira a sequência (ex: 1,2,3,5):</label>
+            <input type="text" id="sequence-input" placeholder="1,2,3,5,6,7,9,10">
+        </div>
+
+        <div class="button-group">
+            <button id="find-button" class="cta">
+                <span>Iniciar</span>
+                <svg width="13px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+            </button>
+
+            <button id="reset-button" class="cta secondary">
+                <span>Resetar</span>
+                <svg width="13px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <div class="result-container">
+            <h2>Números Perdidos:</h2>
+            <div id="result" class="result-box"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

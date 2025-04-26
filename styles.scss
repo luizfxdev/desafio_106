@@ -1,0 +1,187 @@
+$color: #2c3e50;
+$primary: #FFAB9D;
+$secondary: #3498db;
+$background: #f5f7fa;
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: $color;
+}
+
+h1 {
+    text-align: center;
+    color: #e74c3c;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 28px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+
+    &:focus {
+        border-color: $primary;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($primary, 0.2);
+    }
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 15px;
+
+    .cta {
+        position: relative;
+        padding: 15px 25px;
+        min-width: 160px;
+        transition: all .2s ease;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: $color;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            border-radius: 28px;
+            background: rgba($primary, .5);
+            width: 56px;
+            height: 56px;
+            transition: all .3s ease;
+            z-index: 0;
+        }
+
+        span {
+            position: relative;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 900;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            vertical-align: middle;
+            z-index: 1;
+            white-space: nowrap;
+        }
+
+        svg {
+            position: relative;
+            top: 0;
+            margin-left: 10px;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke: $color;
+            stroke-width: 2;
+            transform: translateX(-5px);
+            transition: all .3s ease;
+            z-index: 1;
+        }
+
+        &:hover {
+            &:before {
+                width: 100%;
+                background: rgba($primary, 1);
+            }
+
+            svg {
+                transform: translateX(0);
+            }
+        }
+
+        &:active {
+            transform: scale(.96);
+        }
+
+        &.secondary {
+            &:before {
+                background: rgba($secondary, .5);
+            }
+
+            &:hover:before {
+                background: rgba($secondary, 1);
+            }
+        }
+    }
+}
+
+.result-container {
+    text-align: center;
+}
+
+.result-box {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 50px;
+    font-size: 18px;
+    margin-top: 10px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    &.highlight {
+        border-color: $primary;
+        animation: pulse 1s;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba($primary, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba($primary, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba($primary, 0);
+    }
+}
