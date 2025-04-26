@@ -1,7 +1,9 @@
 A Jornada dos Números Perdidos
 
 
-Bem-vindo, heroico programador! 🦸‍♂️🦸‍♀️ Você foi escolhido para participar de uma missão épica no mundo dos números perdidos. Sua tarefa é ajudar a encontrar quais números estão faltando em uma sequência mágica de números inteiros!
+Bem-vindo, heroico programador! 
+
+Você foi escolhido para participar de uma missão épica no mundo dos números perdidos. Sua tarefa é ajudar a encontrar quais números estão faltando em uma sequência mágica de números inteiros!
 
 Contexto: Em um reino distante governado pela lógica e a matemática, uma sequência de números naturais mágicos foi interrompida. Os sábios do reino acreditam que a série completa traria equilíbrio ao seu mundo. No entanto, um terrível bug_removeus os seguintes números da sequência:
 
